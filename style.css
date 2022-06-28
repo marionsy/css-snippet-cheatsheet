@@ -1,0 +1,98 @@
+* {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::selection {
+    color: rgb(154, 249, 238);
+}
+
+h1 {
+    color: pink;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 8px;
+    position: relative;
+    margin-top: -30px;
+    color: pink;
+    transition: all 0.5s ease-in-out
+}
+
+.box:hover, 
+.box:hover header {
+    box-shadow: inset 0px 0px 8px
+    rgba(255, 192, 203, 1), 0 0 15px
+    rgba(255, 192, 203, 1);
+}
+
+.cards {
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 10px;
+}
+
+.box {
+    flex-basis: 33%;
+    flex-grow: 0;
+    padding: 10px;
+    border: 1px dotted white;
+    margin: 20px;
+    box-shadow: inset 0px 0px 8px pink;
+    transition: all 0.5s ease-in-out;
+}
+
+.text {
+    color: white;
+    font-size: 13px;
+}
+
+pre {
+    color: white;
+    font-size: 12px;
+    font-family: monospace;
+    line-height: 1.5;
+    background-image: linear-gradient(
+        rgba(255, 192, 203, .3) 0%,
+        rgb(255, 192, 203, 1) 100%
+        );
+    border-radius: 5px;
+    user-select: all;
+}
+
+.footer {
+    color: pink;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .cards {
+        flex-direction: column;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        grid-template-columns: 100%;
+    }
+}
